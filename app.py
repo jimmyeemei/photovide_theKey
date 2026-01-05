@@ -2,10 +2,10 @@ import os
 os.environ["HTTP_PROXY"] = "http://127.0.0.1:7890"
 os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
 import streamlit as st
-from google import genai
+import google.generativeai as genai
 from PIL import Image
 
-# --- 页面配置 ---
+# --- 页面配置 ---##
 st.set_page_config(page_title="PhotoVibe - AI文案助手", page_icon="📸")
 
 st.title("📸 PhotoVibe: 让你的照片会说话")
