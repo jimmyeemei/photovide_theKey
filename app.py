@@ -29,8 +29,9 @@ if uploaded_file and st.button("生成文案"):
     else:
         try:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.5-flash')
             res = model.generate_content(["写一段中文文案", Image.open(uploaded_file)])
             st.write(res.text)
         except Exception as e:
+
             st.error(f"错误: {e}")
